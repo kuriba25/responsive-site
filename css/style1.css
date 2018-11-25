@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+html {
+  font-size: 62.5%;
+  background-color: #fdfcf6; }
+
+.abel {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+/*top
+-----------------------------------------*/
+.topphoto {
+  background-image: url("../images/topphoto.jpg");
+    height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; }
+
+
+/*article
+-----------------------------------------*/
+#plan {
+  margin: 40px 0; }
+    #plan h1 {
+      color: red;
+      font-weight: bold;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  #plan .flexbox {
+  display: block;
+}
+    #plan .flexbox .box-flex {
+      margin: 10px 0; }
+      #plan .flexbox .box-flex h2 {
+        text-align: center;
+        padding: 5px 0;
+        background-color: #ff6666;
+        color: #4c4c4c;
+        font-size: 1.5rem; }
+      #plan .flexbox .box-flex p.content {
+        padding: 5px;
+        background-color: #fff9d8;
+        font-size: 1.2rem; }
+
+/*last-contant
+-----------------------------------------*/
+#last-content {
+  background-color: #fff2a5;
+  padding: 20px 0; }
+  #last-content p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 5px; }
+  #last-content .button {
+    background-color: #ff9999;
+    width: 30%;
+    height: 20px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none; }
+    #last-content .button:link {
+      color: #333333; }
+    #last-content .button:hover, #last-content .button:active {
+      color: #cc0000; }
+    #last-content .button:visited {
+      color: #2f4f4f; }
+
+
+/*★★★PC VIEW★★★
+-----------------------------------------*/
+@media (min-width: 768px) {
+  .topphoto{
+    height: 500px !important;
+  }
+  #plan .flexbox {
+  background-color: pink;
+    display: flex;
+  }
+    #plan .flexbox .box-flex {
+      min-width: 30%;
+      margin: 0 auto; } }
+/*# シンプルめを意識してコーディング */

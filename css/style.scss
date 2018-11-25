@@ -1,0 +1,118 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+//colors
+$baseColor: #fdfcf6;
+$keyColor: red;
+$subColor: #bea300;
+$fontColor: #4c4c4c;
+
+//body
+html{
+    font-size: 62.5%;
+    background-color: $baseColor;
+}
+
+/*top
+-----------------------------------------*/
+.topphoto{
+    background-image:url("../images/topphoto.jpg");
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+}
+
+
+
+/*article
+-----------------------------------------*/
+#plan{
+    margin: 40px 0;
+     h1{
+         text-align: center;
+         color: $keyColor;
+         font-weight: bold;
+         font-size: 2.4rem;
+         margin-bottom :10px;
+         }
+ .flexbox{
+     display:block;
+     .box-flex{
+         margin:10px 0;
+         h2{
+             text-align: center;
+             padding:5px 0;
+             background-color: lighten($keyColor,20%);
+             color: $fontColor;
+             font-size: 1.5rem;
+         }
+         .content{
+             text-align:center;
+             padding: 5px;
+             background-color: lighten($subColor,55%);
+             font-size: 1.2rem;
+             }
+         }
+     }
+}
+
+
+//desctop
+
+#last-content{
+    background-color: lighten($subColor,45%);
+    padding: 20px 0;
+    p{
+       text-align: center;
+       font-weight: bold;
+       font-size: 1.2rem;
+        }
+    .button{
+        background-color: lighten($keyColor,30%);
+        width: 30%;
+        height: 20px;
+        display: block;
+        text-align: center;
+        margin: 10px auto 0;
+        padding-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        @include border-radius(4px);
+        text-decoration: none;
+    &:hover{
+        text-decoration: underline;        
+        }
+    }
+}
+
+//desctop
+@media(min-width:768px) {
+  .topphoto{
+    height: 500px;
+  }
+        #plan {
+        .flexbox{
+            @include display-flex;
+            @include flex-direction(row);
+            .box-flex{
+                 @include flex(1);
+                 margin:0 10px;
+            }
+        }
+    }
+    #last-content{
+        .button{
+            &:link{
+                color:darken($fontColor,10%);
+            }
+            &:hover,&:active{
+                text-decoration:none;
+                color:darken($keyColor,10%);    
+            }
+            &:visited{
+                color: #2f4f4f; 
+            }
+        }
+    }
+}
