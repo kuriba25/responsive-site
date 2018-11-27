@@ -62,7 +62,7 @@ html {
     #last-content .button:hover {
       text-decoration: underline; }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .topphoto {
     height: 500px; }
 
